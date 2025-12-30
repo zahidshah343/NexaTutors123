@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Nexa Lahore Tutors | Excellence in Education</title>
+    <meta name="description" content="Learn about Nexa Lahore Tutors - our mission, vision, teaching methodology, and commitment to academic excellence since 2015.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-blue: #1d4ed8;
+            --accent-amber: #f59e0b;
+        }
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .nav-link {
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent-amber);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 20px;
+            width: 2px;
+            height: calc(100% + 10px);
+            background: #e5e7eb;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .value-card {
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+            border-color: var(--primary-blue);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation (Same as Home Page) -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">Nexa Lahore Tutors</h1>
+                        <p class="text-xs text-gray-500">Excellence in Education</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="about.html" class="nav-link text-blue-600 font-medium">About Us</a>
+                    <a href="subjects.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Subjects</a>
+                    <a href="teachers.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Teach With Us</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors">
+                        Book Free Trial
+                    </a>
+                </div>
+                
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
+                <a href="index.html" class="block py-2 text-gray-700">Home</a>
+                <a href="about.html" class="block py-2 text-blue-600 font-medium">About Us</a>
+                <a href="subjects.html" class="block py-2 text-gray-700">Subjects</a>
+                <a href="teachers.html" class="block py-2 text-gray-700">Teach With Us</a>
+                <a href="contact.html" class="block py-2 text-gray-700">Contact</a>
+                <a href="contact.html" class="block bg-blue-600 text-white font-medium py-2 px-4 rounded-lg text-center">
+                    Book Free Trial
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">About Nexa Lahore Tutors</h1>
+                <p class="text-xl text-blue-100">
+                    Excellence in education since 2015. Transforming academic journeys through personalized tutoring.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Story & Mission</h2>
+                    <div class="space-y-4 text-gray-600">
+                        <p>
+                            Founded in 2015, Nexa Lahore Tutors began with a simple mission: to provide <strong class="text-blue-600">high-quality, accessible tutoring</strong> to students across Lahore. What started as a small team of passionate educators has grown into one of Lahore's most trusted tutoring services.
+                        </p>
+                        <p>
+                            We recognized that every student learns differently, and traditional classroom settings often fail to address individual needs. That's why we pioneered a <strong class="text-blue-600">personalized approach</strong> to tutoring, focusing on each student's unique learning style, pace, and academic goals.
+                        </p>
+                        <p>
+                            Today, we've helped <strong class="text-blue-600">over 500 students</strong> achieve academic success, with 95% showing significant grade improvement within their first three months with us.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-200">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Our Mission</h3>
+                        <p class="text-gray-700">
+                            To empower students with the knowledge, skills, and confidence needed to excel academically and develop into lifelong learners through personalized, expert tutoring.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-8">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+                                <div class="text-3xl font-bold text-blue-600 mb-2">8+</div>
+                                <div class="text-gray-700">Years Experience</div>
+                            </div>
+                            <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+                                <div class="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                                <div class="text-gray-700">Students Taught</div>
+                            </div>
+                            <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+                                <div class="text-3xl font-bold text-blue-600 mb-2">95%</div>
+                                <div class="text-gray-700">Success Rate</div>
+                            </div>
+                            <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+                                <div class="text-3xl font-bold text-blue-600 mb-2">25+</div>
+                                <div class="text-gray-700">Expert Tutors</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Our Teaching Philosophy</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    <span class="text-gray-700">Personalized learning plans for each student</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    <span class="text-gray-700">Concept-based teaching over rote memorization</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    <span class="text-gray-700">Regular progress tracking and feedback</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    <span class="text-gray-700">Exam strategy and time management training</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Core Values</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    The principles that guide everything we do at Nexa Lahore Tutors
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="value-card">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Student-Centered Approach</h3>
+                    <p class="text-gray-600">
+                        Every student is unique. We tailor our teaching methods to match individual learning styles, ensuring maximum comprehension and retention.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Excellence in Teaching</h3>
+                    <p class="text-gray-600">
+                        We maintain the highest standards of teaching excellence. Our tutors are not just subject experts but skilled educators passionate about student success.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Integrity & Trust</h3>
+                    <p class="text-gray-600">
+                        We build relationships based on trust and transparency. Honest progress reporting and clear communication are fundamental to our service.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Innovative Methods</h3>
+                    <p class="text-gray-600">
+                        We continuously evolve our teaching methodologies, incorporating modern techniques and technology to enhance the learning experience.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Passion for Education</h3>
+                    <p class="text-gray-600">
+                        Our team is driven by a genuine passion for education and a commitment to making a positive impact on students' academic journeys.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Proven Results</h3>
+                    <p class="text-gray-600">
+                        We measure our success by our students' achievements. Our track record of consistent grade improvement speaks for itself.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey Timeline -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Journey</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Milestones in our commitment to educational excellence
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="timeline-item">
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="text-blue-600 font-bold mb-2">2015</div>
+                        <h3 class="text-xl font-bold mb-2">Foundation</h3>
+                        <p class="text-gray-600">
+                            Nexa Lahore Tutors was founded with 3 expert tutors and a vision to provide personalized education.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="text-blue-600 font-bold mb-2">2017</div>
+                        <h3 class="text-xl font-bold mb-2">Expansion</h3>
+                        <p class="text-gray-600">
+                            Expanded to 10+ tutors and introduced specialized O/A Levels programs. Served 100+ students.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="text-blue-600 font-bold mb-2">2019</div>
+                        <h3 class="text-xl font-bold mb-2">Digital Transformation</h3>
+                        <p class="text-gray-600">
+                            Launched online tutoring platform to reach students across Lahore. Introduced learning management system.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="text-blue-600 font-bold mb-2">2021</div>
+                        <h3 class="text-xl font-bold mb-2">Curriculum Development</h3>
+                        <p class="text-gray-600">
+                            Developed proprietary teaching materials and assessment systems. Reached 300+ student milestone.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="text-blue-600 font-bold mb-2">2023</div>
+                        <h3 class="text-xl font-bold mb-2">Excellence Recognition</h3>
+                        <p class="text-gray-600">
+                            Recognized as one of Lahore's top tutoring services. 95% student satisfaction rate achieved.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <div class="text-blue-600 font-bold mb-2">2024</div>
+                        <h3 class="text-xl font-bold mb-2">Future Vision</h3>
+                        <p class="text-gray-600">
+                            Expanding to new cities. Developing AI-powered learning analytics for enhanced personalized education.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team (Preview) -->
+    <section class="py-16 bg-gradient-to-r from-blue-50 to-blue-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Meet Our Leadership</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Experienced educators dedicated to student success
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Zahid Shah</h3>
+                    <p class="text-blue-600 font-medium mb-3">Founder & Director</p>
+                    <p class="text-gray-600 text-sm">
+                        PhD in Mathematics, 15+ years teaching experience, former university professor
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-chalkboard-teacher text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Sarah Malik</h3>
+                    <p class="text-blue-600 font-medium mb-3">Head of Academics</p>
+                    <p class="text-gray-600 text-sm">
+                        M.Sc. Physics, 12+ years O/A Levels teaching, curriculum development specialist
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user-graduate text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Usman Ali</h3>
+                    <p class="text-blue-600 font-medium mb-3">Student Success Coordinator</p>
+                    <p class="text-gray-600 text-sm">
+                        M.Ed., 10+ years in educational counseling, student progress monitoring expert
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="teachers.html" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+                    <i class="fas fa-users mr-2"></i> Meet All Our Tutors
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-700 to-blue-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Academic Journey?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-blue-100">
+                Join hundreds of successful students who transformed their academic performance with us
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors">
+                    <i class="fas fa-calendar-check mr-2"></i> Book Free Assessment
+                </a>
+                <a href="contact.html" class="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors">
+                    <i class="fas fa-comments mr-2"></i> Schedule Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as Home Page) -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-600 text-white p-2 rounded-lg mr-3">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Nexa Lahore Tutors</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Excellence in education since 2015. Providing top-quality tutoring services across Lahore.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="subjects.html" class="text-gray-400 hover:text-white">All Subjects</a></li>
+                        <li><a href="teachers.html" class="text-gray-400 hover:text-white">Become a Tutor</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Popular Subjects</h4>
+                    <ul class="space-y-2">
+                        <li><a href="subjects.html#mathematics" class="text-gray-400 hover:text-white">Mathematics</a></li>
+                        <li><a href="subjects.html#physics" class="text-gray-400 hover:text-white">Physics</a></li>
+                        <li><a href="subjects.html#chemistry" class="text-gray-400 hover:text-white">Chemistry</a></li>
+                        <li><a href="subjects.html#biology" class="text-gray-400 hover:text-white">Biology</a></li>
+                        <li><a href="subjects.html#english" class="text-gray-400 hover:text-white">English Language</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Information</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">123 Education Street, Lahore, Pakistan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">+92 300 1234567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">info@nexalahoretutors.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">Mon-Sat: 9AM-8PM, Sun: 10AM-4PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2015-<span id="current-year"></span> Nexa Lahore Tutors. All rights reserved.</p>
+                <p class="mt-2 text-sm">Providing excellence in education across Lahore</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923001234567?text=Hi%20Nexa%20Lahore%20Tutors,%20I%20visited%20your%20about%20page%20and%20would%20like%20to%20learn%20more%20about%20your%20tutoring%20services" 
+       class="whatsapp-float" 
+       target="_blank"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

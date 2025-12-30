@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nexa Lahore Tutors | Get in Touch</title>
+    <meta name="description" content="Contact Nexa Lahore Tutors for tutoring inquiries, free trial sessions, teacher applications, or general questions. Multiple contact options available.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-blue: #1d4ed8;
+            --accent-amber: #f59e0b;
+        }
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .nav-link {
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent-amber);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.1);
+            border-color: var(--primary-blue);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #374151;
+        }
+        
+        .required::after {
+            content: ' *';
+            color: #ef4444;
+        }
+        
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .hours-table tr {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .hours-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .hours-table td {
+            padding: 10px 0;
+        }
+        
+        .hours-table td:first-child {
+            font-weight: 500;
+            color: #374151;
+        }
+        
+        .hours-table td:last-child {
+            text-align: right;
+            color: #6b7280;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">Nexa Lahore Tutors</h1>
+                        <p class="text-xs text-gray-500">Excellence in Education</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">About Us</a>
+                    <a href="subjects.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Subjects</a>
+                    <a href="teachers.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Teach With Us</a>
+                    <a href="contact.html" class="nav-link text-blue-600 font-medium">Contact</a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <a href="#contact-form" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors">
+                        Send Message
+                    </a>
+                </div>
+                
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
+                <a href="index.html" class="block py-2 text-gray-700">Home</a>
+                <a href="about.html" class="block py-2 text-gray-700">About Us</a>
+                <a href="subjects.html" class="block py-2 text-gray-700">Subjects</a>
+                <a href="teachers.html" class="block py-2 text-gray-700">Teach With Us</a>
+                <a href="contact.html" class="block py-2 text-blue-600 font-medium">Contact</a>
+                <a href="#contact-form" class="block bg-blue-600 text-white font-medium py-2 px-4 rounded-lg text-center">
+                    Send Message
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Nexa Lahore Tutors</h1>
+                <p class="text-xl text-blue-100">
+                    Get in touch for tutoring inquiries, free trial sessions, or any questions you may have
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Multiple Ways to Reach Us</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Choose the contact method that works best for you. We respond within 24 hours.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Phone -->
+                <div class="contact-card">
+                    <div class="contact-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Call Us</h3>
+                    <p class="text-gray-600 mb-4">
+                        Speak directly with our academic advisors for immediate assistance and consultation.
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-500 mr-3"></i>
+                            <a href="tel:+923064330657" class="text-blue-600 hover:text-blue-800 font-semibold text-lg">
+                                +92 306 4330657
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-500 mr-3"></i>
+                            <a href="tel:+923064330657" class="text-blue-600 hover:text-blue-800 font-semibold text-lg">
+                                +92 306 4330657
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-100">
+                        <p class="text-sm text-gray-500">
+                            <i class="fas fa-clock mr-1"></i> Best time to call: 10AM-7PM
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Email -->
+                <div class="contact-card">
+                    <div class="contact-icon bg-green-100 text-green-600">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Email Us</h3>
+                    <p class="text-gray-600 mb-4">
+                        Send detailed inquiries or documents. We respond to all emails within 24 hours.
+                    </p>
+                    <div class="space-y-3">
+                        <div>
+                            <p class="text-sm text-gray-500 mb-1">General Inquiries:</p>
+                            <a href="mailto:info@nexalahoretutors.com" class="text-green-600 hover:text-green-800 font-semibold">
+                                info@nexalahoretutors.com
+                            </a>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 mb-1">Academic Support:</p>
+                            <a href="mailto:academics@nexalahoretutors.com" class="text-green-600 hover:text-green-800 font-semibold">
+                                academics@nexalahoretutors.com
+                            </a>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 mb-1">Teacher Applications:</p>
+                            <a href="mailto:careers@nexalahoretutors.com" class="text-green-600 hover:text-green-800 font-semibold">
+                                careers@nexalahoretutors.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Visit -->
+                <div class="contact-card">
+                    <div class="contact-icon bg-amber-100 text-amber-600">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Visit Our Center</h3>
+                    <p class="text-gray-600 mb-4">
+                        Schedule an in-person consultation at our tutoring center in Lahore.
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-pin text-amber-500 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium">Nexa Lahore Tutors Center</p>
+                                <p class="text-gray-600">Model Town Education Street, Gulberg</p>
+                                <p class="text-gray-600">Lahore, Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-100">
+                        <p class="text-sm text-gray-500">
+                            <i class="fas fa-car mr-1"></i> Parking available on premises
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div id="contact-form">
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-2">Send Us a Message</h2>
+                        <p class="text-gray-600 mb-6">
+                            Fill out the form below and we'll get back to you as soon as possible.
+                        </p>
+                        
+                        <form id="contactForm" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="form-label required">Full Name</label>
+                                    <input type="text" class="form-input" placeholder="Enter your full name" required>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label required">Email Address</label>
+                                    <input type="email" class="form-input" placeholder="your.email@example.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="form-label required">Phone Number</label>
+                                    <input type="tel" class="form-input" placeholder="+92 306 4330657" required>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">Subject of Interest</label>
+                                    <select class="form-input">
+                                        <option value="">Select subject</option>
+                                        <option value="mathematics">Mathematics</option>
+                                        <option value="physics">Physics</option>
+                                        <option value="chemistry">Chemistry</option>
+                                        <option value="biology">Biology</option>
+                                        <option value="english">English</option>
+                                        <option value="computer-science">Computer Science</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="form-label">Inquiry Type</label>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="inquiry-type" value="tutoring" class="mr-2" checked>
+                                        <span class="text-gray-700">Tutoring</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="inquiry-type" value="trial" class="mr-2">
+                                        <span class="text-gray-700">Free Trial</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="inquiry-type" value="teacher" class="mr-2">
+                                        <span class="text-gray-700">Teach With Us</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="inquiry-type" value="general" class="mr-2">
+                                        <span class="text-gray-700">General</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="form-label required">Message</label>
+                                <textarea class="form-input" rows="5" placeholder="Tell us how we can help you..." required></textarea>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="form-label">Preferred Contact Method</label>
+                                    <select class="form-input">
+                                        <option value="">Any method</option>
+                                        <option value="phone">Phone Call</option>
+                                        <option value="email">Email</option>
+                                        <option value="whatsapp">WhatsApp</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">Best Time to Contact</label>
+                                    <select class="form-input">
+                                        <option value="">Any time</option>
+                                        <option value="morning">Morning (9AM-12PM)</option>
+                                        <option value="afternoon">Afternoon (12PM-4PM)</option>
+                                        <option value="evening">Evening (4PM-8PM)</option>
+                                        <option value="weekend">Weekend</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="flex items-start">
+                                    <input type="checkbox" class="mt-1 mr-3" required>
+                                    <span class="text-gray-700 text-sm">
+                                        I agree to receive communications from Nexa Lahore Tutors regarding my inquiry. 
+                                        Your information will be kept confidential.
+                                    </span>
+                                </label>
+                            </div>
+                            
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex-1">
+                                    <i class="fas fa-paper-plane mr-2"></i> Send Message
+                                </button>
+                                <button type="reset" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-8 rounded-lg transition-colors">
+                                    Clear Form
+                                </button>
+                            </div>
+                            
+                            <p class="text-sm text-gray-500 text-center">
+                                We typically respond within 12-48 hours during business hours.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Map & Business Hours -->
+                <div class="space-y-8">
+                    <!-- Map -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Location</h2>
+                        <div class="map-container">
+                            <div class="bg-gradient-to-r from-blue-100 to-blue-200 h-64 flex items-center justify-center">
+                                <div class="text-center p-8">
+                                    <div class="text-4xl mb-4">📍</div>
+                                    <h3 class="text-xl font-bold mb-2">Nexa Lahore Tutors Center</h3>
+                                    <p class="text-gray-700">Model Town,Lahore</p>
+                                    <p class="text-gray-600 text-sm mt-2"></p>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 border-t border-gray-200">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="font-medium">Get Directions</p>
+                                    </div>
+                                    <a href="https://maps.google.com/?q=123+Education+Street+Lahore" 
+                                       target="_blank" 
+                                       class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium">
+                                        <i class="fas fa-directions mr-2"></i> Open in Maps
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Business Hours -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Business Hours</h2>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Monday - Friday</td>
+                                <td>9:00 AM - 8:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>9:00 AM - 6:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>10:00 AM - 4:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Public Holidays</td>
+                                <td>By appointment only</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <h3 class="text-lg font-bold mb-3">Emergency Contact</h3>
+                            <p class="text-gray-600 mb-2">
+                                For urgent matters outside business hours:
+                            </p>
+                            <a href="tel:+923064330657" class="text-blue-600 hover:text-blue-800 font-semibold">
+                                <i class="fas fa-phone-alt mr-2"></i> +92 313 4402018
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-6">
+                        <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="subjects.html" class="bg-white hover:bg-blue-50 text-blue-700 px-4 py-3 rounded-lg font-medium text-center transition-colors">
+                                <i class="fas fa-book mr-2"></i> View Subjects
+                            </a>
+                            <a href="teachers.html" class="bg-white hover:bg-blue-50 text-blue-700 px-4 py-3 rounded-lg font-medium text-center transition-colors">
+                                <i class="fas fa-chalkboard-teacher mr-2"></i> Teach With Us
+                            </a>
+                            <a href="about.html" class="bg-white hover:bg-blue-50 text-blue-700 px-4 py-3 rounded-lg font-medium text-center transition-colors">
+                                <i class="fas fa-info-circle mr-2"></i> About Us
+                            </a>
+                            <a href="#faq" class="bg-white hover:bg-blue-50 text-blue-700 px-4 py-3 rounded-lg font-medium text-center transition-colors">
+                                <i class="fas fa-question-circle mr-2"></i> FAQ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white" id="faq">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Find quick answers to common questions about our tutoring services
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="border border-gray-200 rounded-xl p-6 hover:border-blue-300 transition-colors">
+                    <h3 class="text-lg font-bold mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-blue-500 mr-3"></i>
+                        How do I book a free trial session?
+                    </h3>
+                    <p class="text-gray-600">
+                        You can book a free trial session by calling us, sending a WhatsApp message, or filling out the contact form above. We'll schedule a 30-minute assessment session at your convenience.
+                    </p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-xl p-6 hover:border-blue-300 transition-colors">
+                    <h3 class="text-lg font-bold mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-blue-500 mr-3"></i>
+                        What are your tutoring fees?
+                    </h3>
+                    <p class="text-gray-600">
+                        Fees vary based on subject, level, and package chosen. Generally, they range from ₨ 2,500 to ₨ 5,000 per month per subject. Contact us for a detailed quote based on your specific needs.
+                    </p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-xl p-6 hover:border-blue-300 transition-colors">
+                    <h3 class="text-lg font-bold mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-blue-500 mr-3"></i>
+                        Do you offer online tutoring?
+                    </h3>
+                    <p class="text-gray-600">
+                        Yes, we offer both in-person and online tutoring options. Our online sessions are conducted via secure platforms with interactive whiteboards and screen sharing capabilities.
+                    </p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-xl p-6 hover:border-blue-300 transition-colors">
+                    <h3 class="text-lg font-bold mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-blue-500 mr-3"></i>
+                        How quickly will you respond to my inquiry?
+                    </h3>
+                    <p class="text-gray-600">
+                        We respond to phone calls and WhatsApp messages immediately during business hours. Emails and contact form submissions are typically answered within 12-48 hours during business days.
+                    </p>
+                </div>
+                
+                <div class="border border-gray-200 rounded-xl p-6 hover:border-blue-300 transition-colors">
+                    <h3 class="text-lg font-bold mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-blue-500 mr-3"></i>
+                        Can I visit your center without an appointment?
+                    </h3>
+                    <p class="text-gray-600">
+                        While walk-ins are welcome, we recommend scheduling an appointment to ensure a team member is available to give you their full attention. You can call ahead or schedule through our website.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">Didn't find your answer?</p>
+                <a href="#contact-form" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+                    <i class="fas fa-envelope mr-2"></i> Ask Your Question
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Quick Contact -->
+    <section class="py-16 bg-gradient-to-r from-green-500 to-green-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-5xl mb-6">💬</div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Quick Contact via WhatsApp</h2>
+                <p class="text-xl mb-8 text-green-100">
+                    Prefer to chat on WhatsApp? Send us a message for fastest response!
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-lg mx-auto">
+                    <a href="https://wa.me/923064330657?text=Hi,%20I%20want%20to%20book%20a%20free%20trial%20session" 
+                       target="_blank"
+                       class="bg-white hover:bg-green-50 text-green-700 font-semibold py-3 px-4 rounded-lg transition-colors">
+                        Free Trial
+                    </a>
+                    <a href="https://wa.me/923064330657?text=Hi,%20I%20need%20information%20about%20tutoring%20fees%20and%20packages" 
+                       target="_blank"
+                       class="bg-white hover:bg-green-50 text-green-700 font-semibold py-3 px-4 rounded-lg transition-colors">
+                        Fee Inquiry
+                    </a>
+                    <a href="https://wa.me/923064330657?text=Hi,%20I%20have%20a%20general%20question%20about%20your%20services" 
+                       target="_blank"
+                       class="bg-white hover:bg-green-50 text-green-700 font-semibold py-3 px-4 rounded-lg transition-colors">
+                        General Question
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-600 text-white p-2 rounded-lg mr-3">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Nexa Lahore Tutors</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Excellence in education since 2015. Providing top-quality tutoring services across Lahore.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="subjects.html" class="text-gray-400 hover:text-white">All Subjects</a></li>
+                        <li><a href="teachers.html" class="text-gray-400 hover:text-white">Become a Tutor</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Popular Subjects</h4>
+                    <ul class="space-y-2">
+                        <li><a href="subjects.html#mathematics" class="text-gray-400 hover:text-white">Mathematics</a></li>
+                        <li><a href="subjects.html#physics" class="text-gray-400 hover:text-white">Physics</a></li>
+                        <li><a href="subjects.html#chemistry" class="text-gray-400 hover:text-white">Chemistry</a></li>
+                        <li><a href="subjects.html#biology" class="text-gray-400 hover:text-white">Biology</a></li>
+                        <li><a href="subjects.html#english" class="text-gray-400 hover:text-white">English Language</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Information</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">Model Town, Lahore, Pakistan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">+92 300 4330657</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">info@nexalahoretutors.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">Mon-Sat: 9AM-8PM, Sun: 10AM-4PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2015-<span id="current-year"></span> Nexa Lahore Tutors. All rights reserved.</p>
+                <p class="mt-2 text-sm">Providing excellence in education across Lahore</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923064330657?text=Hi%20Nexa%20Lahore%20Tutors,%20I%20visited%20your%20contact%20page%20and%20need%20assistance" 
+       class="whatsapp-float" 
+       target="_blank"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const formObject = Object.fromEntries(formData);
+            
+            // In a real application, you would send this data to your server
+            // For demo purposes, we'll just show a success message
+            
+            alert('Thank you for your message! We will contact you within 24 hours.');
+            
+            // Reset form
+            this.reset();
+            
+            // Scroll to top of form
+            document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Pre-fill form based on URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const subject = urlParams.get('subject');
+        const plan = urlParams.get('plan');
+        
+        if (subject) {
+            const subjectSelect = document.querySelector('select[name="subject"]');
+            if (subjectSelect) {
+                subjectSelect.value = subject.toLowerCase();
+            }
+        }
+        
+        if (plan) {
+            const planRadios = document.querySelectorAll('input[name="inquiry-type"]');
+            if (plan === 'basic' || plan === 'standard' || plan === 'premium') {
+                planRadios.forEach(radio => {
+                    if (radio.value === 'trial') {
+                        radio.checked = true;
+                    }
+                });
+            }
+        }
+        
+        // FAQ accordion functionality
+        const faqItems = document.querySelectorAll('#faq .border');
+        faqItems.forEach(item => {
+            const answer = item.querySelector('p');
+            answer.style.display = 'none';
+            
+            item.addEventListener('click', function() {
+                const isVisible = answer.style.display === 'block';
+                answer.style.display = isVisible ? 'none' : 'block';
+                
+                // Add animation class
+                if (!isVisible) {
+                    answer.classList.add('animate-fadeIn');
+                }
+            });
+        });
+        
+        // Initialize all FAQs as collapsed
+        document.querySelectorAll('#faq p').forEach(p => {
+            p.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
